@@ -7,9 +7,10 @@ import configs from './initial-state';
 
 interface UICustomizer {
   title: string;
+  visible?: boolean;
 }
 
-const Customizer = ({title}: UICustomizer) => {
+const Customizer = ({title, visible}: UICustomizer) => {
   const store = createStore(reducers, configs);
   return (
     <Provider store={store} >

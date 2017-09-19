@@ -1,8 +1,12 @@
+export interface StyledComponentList {
+  components: Array<StyledComponent>
+}
+
 export interface StyledComponent {
   id: number;
   name?: string;
   description?: string;
-  selector?: string;
+  selector: string;
   propValues: StyleProps;
 }
 

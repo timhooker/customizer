@@ -10,6 +10,8 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <link rel="stylesheet" href="https://app.ruzuku.com/assets/courses-fb8c8eb1014c0c71e9783066bf52c2af.css">
+    
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -20,8 +22,145 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      body {
+        margin-top: 48px !important;
+        padding: 32px !important;
+      }
+      .rz-site-nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+      .rz-desktop-nav {
+        display: flex;
+        flex-direction: row-reverse;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        line-height: 1;
+      }
+      .rz-mobile-nav {
+        display: none;
+      }
+      .rz-content {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+      .rz-site-nav__item {
+        display: block;
+        text-align: center;
+      }
+      .rz-site-nav__item-link {
+        font-size: 13px;
+        padding: 16px;
+        display: inline-block;
+      }
+      .rz-site-nav__item-profile__link {
+        padding-left: 40px;
+        position: relative;
+      }
+      .rz-site-nav__pic-profile {
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        overflow: hidden;
+      }
+      .rz-site-nav a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .rz-btn-default {
+        border: 0;
+        padding: 8px 16px;
+        font-size: 14px;
+        margin-top: 8px;
+      }
+    </style>
   </head>
   <body>
+      <div class="rz-site-nav">
+          
+                <nav class="nav-supplementary rz-content">
+                  <nav class="nav-account">
+                    <ul class="site_nav rz-desktop-nav dropit">
+                      <li class="rz-site-nav__item site_nav_item">
+                        <a target="_blank" class="rz-site-nav__item-link" href="https://ruzuku.helpscoutdocs.com/">Support</a>
+                      </li>
+                      <li class="rz-site-nav__item site_nav_item">
+                        <a class="rz-site-nav__item-link" href="/courses?as_student=true">My Learning Library</a>
+                      </li>
+                      <li class="rz-site-nav__item site_nav_item">
+                        <a class="rz-site-nav__item-link" href="/courses">Manage Courses</a>
+                      </li>
+                      
+                      <li class="rz-site-nav__item site_nav_item">
+                        <a class="rz-site-nav__item-link" href="/site-management">Site Management</a>
+                      </li>
+                      <li class="rz-site-nav__item rz-site-nav__item-profile site_nav_item dropit-trigger">
+                        <a class="name js-show-menu rz-site-nav__item-profile__link rz-site-nav__item-link">
+                          Tim
+                          <img id="avatar" class="rz-site-nav__pic-profile pic-profile rz-pic-profile" data-default-src="/assets/avatars/7.jpg" src="https://s3.amazonaws.com/ruzuku_production/profile_pictures/77594/image.jpg" alt="Image">
+                        </a>
+                        
+                        <ul class="rz-profile-nav profile_nav dropout_menu dropit-submenu" style="display:none;">
+                          <li class="profile_nav_link rz-profile-nav__item"><a href="/settings">Profile</a></li>
+                          <li class="profile_nav_link rz-profile-nav__item">
+                            <a href="/settings/account">Plans &amp; Billing</a>
+                          </li>
+                          
+                          <li class="profile_nav_link rz-profile-nav__item"><a href="/settings/integrations">Integrations</a></li>
+                          
+                          <li class="profile_nav_link rz-profile-nav__item"><a href="/logout">Sign Out</a></li>
+                          
+                        </ul>
+                      </li>
+                      
+                    </ul><!-- /site-nav -->
+                    
+                    <ul class="rz-mobile-nav">
+                      <li style="display: block;">
+                        <a class="name js-show-menu rz-site-nav__item-profile__link">
+                          Tim
+                          <img id="avatar" class="rz-site-nav__pic-profile pic-profile rz-pic-profile" data-default-src="/assets/avatars/7.jpg" src="https://s3.amazonaws.com/ruzuku_production/profile_pictures/77594/image.jpg" alt="Image">
+                        </a>
+                      </li>
+                      <div class="rz-mobile-nav__col">
+                        <li class="rz-site-nav__item site_nav_item">
+                          <a class="rz-site-nav__item-link" href="/courses?as_student=true">My Learning Library</a>
+                        </li>
+                        <li class="rz-site-nav__item site_nav_item">
+                          <a class="rz-site-nav__item-link" href="/courses">Manage Courses</a>
+                        </li>
+                        
+                        <li class="rz-site-nav__item site_nav_item">
+                          <a class="rz-site-nav__item-link" href="/site-management">Site Management</a>
+                        </li>
+                        <li class="rz-site-nav__item site_nav_item">
+                          <a target="_blank" class="rz-site-nav__item-link" href="https://ruzuku.helpscoutdocs.com/">Support</a>
+                        </li>
+                      </div>
+                      <div class="rz-mobile-nav__col">
+                        <li class="rz-site-nav__item rz-mobile-nav__item"><a class="rz-site-nav__item-link" href="/settings">Profile</a></li>
+                        <li class="rz-site-nav__item rz-mobile-nav__item">
+                          <a class="rz-site-nav__item-link" href="/settings/account">Plans &amp; Billing</a>
+                        </li>
+                        <li class="rz-site-nav__item rz-mobile-nav__item"><a class="rz-site-nav__item-link" href="/settings/integrations">Integrations</a></li>
+                        <li class="rz-site-nav__item rz-mobile-nav__item"><a class="rz-site-nav__item-link" href="/logout">Sign Out</a></li>
+                      </div>
+                    </ul>    
+                  </nav>
+                </nav>
+              </div>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>

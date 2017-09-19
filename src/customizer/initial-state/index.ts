@@ -15,7 +15,26 @@ const configs = {
         label: 'Text Color',
         description: 'The text color',
         inputType: 'ColorPicker',
-        value: '#ffffff',
+        value: '#fafeff',
+      }
+    }
+  },{
+    id: 2,
+    name: 'Buttons',
+    description: 'Your default button',
+    selector: '.rz-btn-default',
+    propValues: {
+      background: {
+        label: 'Background Color',
+        description: 'The background color',
+        inputType: 'ColorPicker',
+        value: '#673AB7',
+      },
+      textColor: {
+        label: 'Text Color',
+        description: 'The text color',
+        inputType: 'ColorPicker',
+        value: '#fafaff',
       }
     }
   }],

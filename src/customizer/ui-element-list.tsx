@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { StyledComponent } from './interface/data';
 import { UIElement } from './ui-element';
+import CssGenerator from './css-generator/index';
 
 export interface ElementListView {
   components: Array<StyledComponent>;
@@ -14,6 +15,7 @@ function UIElementList({ components, dispatch }: ElementListView) {
   }
   return (
     <div>
+      <CssGenerator components={components} />
       {components.map(({id, name, description, selector, propValues}) => {
         const values = {
           id, 
