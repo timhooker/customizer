@@ -191,11 +191,12 @@ module.exports = {
         use: [
           require.resolve('style-loader'),
           {
-            loader: require.resolve('css-loader'),
+            loader: 'typings-for-css-modules-loader',
             options: {
-              importLoaders: 1,
+              // importLoaders: 1,
               modules: true,
-              localIdentName: "[name]__[local]___[hash:base64:5]"  
+              localIdentName: "[name]__[local]___[hash:base64:5]",
+              namedExport: true
             },
           },
           {

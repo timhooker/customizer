@@ -5,11 +5,13 @@ export interface StyledComponentView extends StyledComponent {
 }
 
 export interface StylePropsView {
+  id: number;
   propValues: StyleProps;
   onChange: any;
 }
 
 export interface StylePropView extends StyleProp {
+  id: number;
   propValueName: string;
   onChange: any;
 }

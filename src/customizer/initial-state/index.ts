@@ -1,4 +1,5 @@
 const configs = {
+
   components: [{
     id: 1,
     name: 'Site Nav',
@@ -18,7 +19,7 @@ const configs = {
         value: '#fafeff',
       }
     }
-  },{
+  }, {
     id: 2,
     name: 'Buttons',
     description: 'Your default button',

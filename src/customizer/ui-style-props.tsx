@@ -9,7 +9,7 @@ enum propValueList {
   borderWidth
 }
 
-const UIStyleProps = ({propValues, onChange}: StylePropsView) => {
+const UIStyleProps = ({id, propValues, onChange}: StylePropsView) => {
   return (
     <ul>
       {Object.keys(propValueList).map((value, i) => {
@@ -17,16 +17,17 @@ const UIStyleProps = ({propValues, onChange}: StylePropsView) => {
           return null;
         }
         return (
-          <UIStyleProp key={i} propValueName={value} {...propValues[value]} onChange={onChange}  />
+          <UIStyleProp key={i} id={id} propValueName={value} {...propValues[value]} onChange={onChange}  />
         );
       })}
-      <button className="rz-btn-default" style={{
-        "background-color": propValues.background.value,
-        "color": propValues.textColor.value
-      }}>
+      <button 
+        className="rz-btn-default" 
+        style={{'background-color': propValues.background.value,
+                'color': propValues.textColor.value }}
+      >
         { successfulContrast(propValues.textColor.value, propValues.background.value) ? 
-            'Way to go' : 
-            'Consider colors that contrast better' }
+          'Example' : 
+          'Low Contrast' }
       </button>
     </ul>
   );

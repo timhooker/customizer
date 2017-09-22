@@ -18,9 +18,8 @@ export interface StyleProps {
 }
 
 export interface StyleProp {
-  label?: string;
-  description?: string;
+  label: string;
+  description: string;
   inputType: string;
   value: string;
-  defaultValue?: string;
 }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { StyledComponent } from './interface/data';
 import { UIElement } from './ui-element';
 import CssGenerator from './css-generator/index';
+import * as styles from './customizer.css';
 
 export interface ElementListView {
   components: Array<StyledComponent>;
@@ -14,7 +15,7 @@ function UIElementList({ components, dispatch }: ElementListView) {
     return null;
   }
   return (
-    <div>
+    <ul className={styles.customizer}>
       <CssGenerator components={components} />
       {components.map(({id, name, description, selector, propValues}) => {
         const values = {
@@ -36,7 +37,7 @@ function UIElementList({ components, dispatch }: ElementListView) {
           <UIElement key={id} {...values} onChange={onChange}/>
         );
       })}
-    </div>
+    </ul>
   );
 }
 

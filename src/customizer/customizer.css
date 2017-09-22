@@ -1,0 +1,25 @@
+.customizer {
+  background-color: #333333;
+  color: rgba(255,255,255,.9);
+  position: absolute;
+  top: 44px;
+  left: 0;
+  padding: 16px;
+  font-size: 12px;
+}
+
+.customizer-active {
+  
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  ul {
+    color: blue;
+  }
+}

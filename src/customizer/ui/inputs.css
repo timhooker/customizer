@@ -1,0 +1,16 @@
+.colorPicker {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.colorPickerColorInput {
+  opacity: 0;
+}
+
+.colorPickerSwatch {
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  align-self: center;
+}

@@ -4,11 +4,11 @@ import { UIStyleProps } from './ui-style-props';
 
 const UIElement = ({id, name, description, propValues, onChange}: StyledComponentView) => {
   return (
-    <div>
+    <li>
       <h4>{name}</h4>
       <p>{description}</p>
-      <UIStyleProps propValues={propValues} onChange={onChange} />
-    </div>
+      <UIStyleProps id={id} propValues={propValues} onChange={onChange} />
+    </li>
   );
 };
 
