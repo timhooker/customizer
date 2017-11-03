@@ -2,42 +2,43 @@ const configs = {
 
   components: [{
     id: 1,
-    name: 'Site Nav',
-    description: 'The bar that shows at the top of each page',
-    selector: '.rz-site-nav',
+    description: "The bar that shows at the top of each page",
+    name: "Site Nav",
+    selector: ".rz-site-nav",
     propValues: {
       background: {
-        label: 'Background Color',
-        description: 'The background color',
-        inputType: 'ColorPicker',
-        value: '#3975C0',
+        description: "The background color",
+        inputType: "ColorPicker",
+        key: "--c-nav-bg",
+        label: "Background Color",
+        value: "#3975C0",
       },
       textColor: {
-        label: 'Text Color',
-        description: 'The text color',
-        inputType: 'ColorPicker',
-        value: '#fafeff',
-      }
-    }
+        description: "The text color",
+        inputType: "ColorPicker",
+        label: "Text Color",
+        value: "#fafeff",
+      },
+    },
   }, {
     id: 2,
-    name: 'Buttons',
-    description: 'Your default button',
-    selector: '.rz-btn-default',
+    description: "Your default button",
+    name: "Buttons",
+    selector: ".rz-btn-default",
     propValues: {
       background: {
-        label: 'Background Color',
-        description: 'The background color',
-        inputType: 'ColorPicker',
-        value: '#673AB7',
+        description: "The background color",
+        inputType: "ColorPicker",
+        label: "Background Color",
+        value: "#673AB7",
       },
       textColor: {
-        label: 'Text Color',
-        description: 'The text color',
-        inputType: 'ColorPicker',
-        value: '#fafaff',
-      }
-    }
+        description: "The text color",
+        label: "Text Color",
+        inputType: "ColorPicker",
+        value: "#fafaff",
+      },
+    },
   }],
 };
 

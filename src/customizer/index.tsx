@@ -1,9 +1,9 @@
-import * as React from 'react';
-import UIElementList from './ui-element-list';
-import reducers from './reducers';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import configs from './initial-state';
+import * as React from "react";
+import UIElementList from "./ui-element-list";
+import reducers from "./reducers";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import configs from "./initial-state";
 
 interface UICustomizer {
   title: string;

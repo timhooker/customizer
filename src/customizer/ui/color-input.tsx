@@ -1,5 +1,5 @@
-import * as React from 'react';
-import * as styles from './inputs.css';
+import * as React from "react";
+import * as styles from "./inputs.css";
 
 interface ColorInputView extends React.InputHTMLAttributes<HTMLInputElement> {
   cid: number;
@@ -11,11 +11,11 @@ interface ColorInputView extends React.InputHTMLAttributes<HTMLInputElement> {
 
 function ColorInput({cid, value, valueName,  name, onChange}: ColorInputView) {
 
-  return ( 
+  return (
     <label className={styles.colorPicker}>
       {name}
       <input type="color" className={styles.colorPickerColorInput} value={value} onChange={onChange} />
-      <div className={styles.colorPickerSwatch} style={{backgroundColor: value}}></div>
+      <div className={styles.colorPickerSwatch} style={{backgroundColor: value}} />
     </label>
   );
 }

@@ -1,13 +1,13 @@
 function isValidHexColor(color?: string ): boolean {
   if (!color) {
     return false;
-  } 
+  }
   return !!/^\#([a-z0-9]){6}\b/i.exec(color);
 }
 
-function invalidHexMessage(color?: string ): string {
-  return isValidHexColor(color) ? '' : `${color} is not a valid HEX color`;
-}
+// function invalidHexMessage(color?: string ): string {
+//   return isValidHexColor(color) ? "" : `${color} is not a valid HEX color`;
+// }
 
 function successfulContrast(foreground?: string, background?: string): boolean {
   if (isValidHexColor(foreground) && isValidHexColor(background) ) {
@@ -20,7 +20,7 @@ function successfulContrast(foreground?: string, background?: string): boolean {
     }
   }
   return false;
-} 
+}
 
 function getRatio(c1: number, c2: number) {
   return c1 / c2;
@@ -43,7 +43,7 @@ function convertHexToRgb(hex?: string): RGB {
 }
 interface RGB {
   r: number;
-  b: number; 
+  b: number;
   g: number;
 }
 
@@ -59,4 +59,4 @@ function rgbAdjust(value: number) {
         Math.pow((value + .055) / 1.055, 2.4);
 }
 
-export { isValidHexColor, invalidHexMessage, successfulContrast, relativeLuminance, convertHexToRgb, getRatio };
+export { successfulContrast };

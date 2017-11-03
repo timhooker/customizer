@@ -21,5 +21,6 @@ export interface StyleProp {
   label: string;
   description: string;
   inputType: string;
+  key?: string;
   value: string;
 }
