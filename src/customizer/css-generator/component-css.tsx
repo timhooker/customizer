@@ -6,7 +6,7 @@ function ComponentCss(selector: string, propValues: StyleProps) {
 const propValueList = {
   background: "background-color",
   textColor: "color",
-  borderWidth: "border-width",
+  customCss: "customCss"
 };
 
 function CssProps(propValues: StyleProps) {
@@ -14,9 +14,10 @@ function CssProps(propValues: StyleProps) {
     (accumulator: string, propValue: string) => {
       const prop = propValues[propValue];
       const key = prop.key ? prop.key : propValueList[propValue];
-      return accumulator += prop.value ?
-          `${key}: ${prop.value}; ` :
-          "";
+      const value = prop.value ?
+        `${key}: ${prop.value}; ` :
+        "";
+      return accumulator += value;
     },
     "");
 }
