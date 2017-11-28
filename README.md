@@ -6,7 +6,6 @@ Customizer will:
 - Show live output
 - Give feedback about styles
 - Contain all needed styling options for each section of our site
-- Store and retrieve styles stored in JSON via Redis
 
 Built using React and Redux. 
 
